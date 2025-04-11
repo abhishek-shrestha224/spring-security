@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: auth
+  jpa:
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost/bookstore
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: password
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migrations
+    validate-on-migrate: true
+
+application:
+  security:
+    whitelist:
+      - /auth/signup/
+      - /auth/signin/
+    jwt:
+      secret: f68a6e3942c61a4f953c42de7a5a3f71123b4e0930b251c538cf8e2f6b72c73e
+      token:
+        refreshEndpoint: /auth/token-refresh
+        refresh:
+          lifeSpan: 604800000
+        access:
+          lifeSpan: 60000
