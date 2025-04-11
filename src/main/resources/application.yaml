@@ -4,7 +4,7 @@ spring:
   jpa:
     show-sql: true
   datasource:
-    url: jdbc:mysql://localhost/bookstore
+    url: jdbc:mysql://localhost/auth_app
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: password
