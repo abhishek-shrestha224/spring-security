@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-  @GetMapping("public")
+  @GetMapping("/public")
   public String hello() {
-    return "You are a teapot!";
+    return "You are a asasteapot!";
   }
 
-  @GetMapping("secured")
+  @GetMapping("/secured")
   public String secured() {
     return "You are a secured teapot!";
   }
